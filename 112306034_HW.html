@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HW</title>
+    <script>
+        var result;
+        function add(num1,num2){
+            return num1+num2;
+        }
+        function substract(num1,num2){
+            return num1-num2;
+        }
+        function multiply(num1,num2){
+            return num1*num2;
+        }
+        function divide(num1,num2){
+            if (num2 !== 0) {
+                        return num1 / num2;
+                    } else {
+                        alert('Cannot divide by zero!');
+                        return;
+                    }
+        }
+       
+       
+    </script>
+</head>
+<body>
+     <script>
+        var result;
+        
+
+        var num1 = parseInt(window.prompt('Enter the first number:'))
+        while (isNaN(num1)) {
+                alert('Please enter a valid number!')
+                num1 = parseInt(window.prompt(alert('Enter the first number:')))
+        }
+        var num2 = parseInt(window.prompt('Enter the second number:'))
+        while (isNaN(num2)) {
+                alert('Please enter a valid number!')       
+                num2 = parseInt(window.prompt('Enter the second number:'))
+            }
+        var operation = window.prompt('choose an operatetion(+,-,*,/)') 
+        if (operation == '+') {
+            result = add(num1, num2);
+        } else if (operation == '-') {
+            result = substract(num1, num2);
+        } else if (operation == '*') {
+            result = multiply(num1, num2);
+        } else if (operation == '/') {
+            result = divide(num1, num2);
+        } else {
+            alert('Invalid operation!');
+        }
+        if (result !== undefined) {
+            alert('The result is: ' + result);
+        }
+        var repeat = window.prompt('Do you want to perform another operation?(yes/no)')
+        
+        while(repeat == 'yes'){
+            var num1 = parseInt(window.prompt('Enter the first number:'))
+        while (isNaN(num1)) {
+                alert('Please enter a valid number!')
+                num1 = parseInt(window.prompt(alert('Enter the first number:')))
+        }
+        var num2 = parseInt(window.prompt('Enter the second number:'))
+        while (isNaN(num2)) {
+                alert('Please enter a valid number!')       
+                num2 = parseInt(window.prompt('Enter the second number:'))
+            }
+        var operation = window.prompt('choose an operatetion(+,-,*,/)') 
+        if (operation == '+') {
+            result = add(num1, num2);
+        } else if (operation == '-') {
+            result = substract(num1, num2);
+        } else if (operation == '*') {
+            result = multiply(num1, num2);
+        } else if (operation == '/') {
+            result = divide(num1, num2);
+        } else {
+            alert('Invalid operation!');
+        }
+        
+        if (result !== undefined) {
+            alert('The result is: ' + result);
+        }
+        var repeat = window.prompt('Do you want to perform another calculation?(yes/no)')
+        }
+        while(repeat != 'yes'){
+
+        }
+
+    </script>
+</body>
+</html>
